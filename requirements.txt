@@ -1,0 +1,9 @@
+# streamlit
+# langchain_core
+# langchain_community
+# langchain_ollama
+# pdfplumber
+langchain-community
+langchain
+langchain_ollama
+pypdf
