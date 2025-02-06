@@ -44,18 +44,15 @@ def ask_question(vector_store, llm, query):
 
 #Run RAG Pipeline
 if __name__ == "__main__":
-    file_path = r"C:\Deepseek_R1\pdfs\Akash Thorat_resume.pdf"  # Change to your file path
+    file_path = r"C:\Deepseek_R1\pdfs\Akash Thorat_resume.pdf"  
     query = "What is this document about?"
 
-    # Step 1: Load and Process Documents
     documents = load_documents(file_path)
     chunks = split_documents(documents)
     
-    # Step 2: Create Vector Store
     vector_store = create_vector_store(chunks)
 
-    # Step 3: Initialize LLM and Ask Questions
     llm = initialize_llm()
     answer = ask_question(vector_store, llm, query)
     
-    print("\n🔹 Answer:", answer)
+    print("Answer:", answer)
